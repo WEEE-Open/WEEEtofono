@@ -6,7 +6,7 @@ def suona(bot, update):
     update.message.reply_text("Hai suonato il citofono. Aspetta che qualcuno ti apra.")
     os.popen('beep')
 
-updater = Updater('YOUR TOKEN HERE')
+updater = Updater(os.environ['TOKEN'])
 
 updater.dispatcher.add_handler(CommandHandler('suona', suona))
 

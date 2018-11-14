@@ -1,0 +1,14 @@
+[Unit]
+Description=WEEEtofono
+After=network.target
+
+[Service]
+Type=simple
+User=piall
+WorkingDirectory=/home/piall/weeetofono
+ExecStart=run.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+Alias=weeetofono.service

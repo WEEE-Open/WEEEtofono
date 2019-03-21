@@ -8,7 +8,7 @@ Type=simple
 User=bot
 Environment="YOUR:TOKEN"
 WorkingDirectory=/home/bot/weeetofono
-ExecStart=/usr/local/bin/pipenv run python3 /home/bot/weeetofono/weeetofono.py
+ExecStart=/usr/local/bin/pipenv run bot
 Restart=on-failure
 
 [Install]

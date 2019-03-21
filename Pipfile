@@ -11,3 +11,6 @@ python-telegram-bot = "*"
 
 [requires]
 python_version = "3.7"
+
+[scripts]
+bot = "python weeetofono.py"

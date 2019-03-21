@@ -6,7 +6,9 @@ import simpleaudio
 campanello = None
 
 
-def suona(update, context):
+# noinspection PyUnusedLocal
+def suona(bot, update):
+    print("DING DING DING")
     global campanello
     update.message.reply_text("Hai suonato il citofono.\n\
     Se sei all'ingresso 2 aspetta che qualcuno ti apra, se non lo sei vai e suona di nuovo.")

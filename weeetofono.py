@@ -24,5 +24,7 @@ updater = Updater(os.environ['TOKEN'])
 
 updater.dispatcher.add_handler(CommandHandler('suona', suona))
 
+print("weeetofono started, begin polling")
+
 updater.start_polling()
 updater.idle()

@@ -8,10 +8,9 @@ campanello = None
 
 # noinspection PyUnusedLocal
 def suona(bot, update):
-    print("DING DING DING")
     global campanello
-    update.message.reply_text("Hai suonato il citofono.\n\
-    Se sei all'ingresso 2 aspetta che qualcuno ti apra, se non lo sei vai e suona di nuovo.")
+    update.message.reply_text("Hai suonato il citofono.\n\n\
+Se sei all'ingresso 2 aspetta che qualcuno ti apra, se non lo sei vai e suona di nuovo.")
     # os.popen('./ring.sh')
     if campanello is not None and campanello.is_playing():
         campanello.stop()

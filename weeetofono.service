@@ -8,8 +8,11 @@ Type=simple
 User=bot
 Environment="YOUR:TOKEN"
 WorkingDirectory=/home/bot/weeetofono
-ExecStart=/usr/local/bin/pipenv run bot
-Restart=on-failure
+ExecStart=/usr/bin/pipenv run bot
+Restart=always
+# Enable if you're using a recent version of systemd,
+# it gives out statistics on IP traffic in systemctl status
+# IPAccounting=yes
 
 [Install]
 WantedBy=multi-user.target

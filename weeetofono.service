@@ -1,14 +1,15 @@
 [Unit]
 Description=WEEEtofono
+Requires=network.target
 After=network.target
 
 [Service]
 Type=simple
-User=piall
-WorkingDirectory=/home/piall/weeetofono
-ExecStart=run.sh
+User=bot
+Environment="YOUR:TOKEN"
+WorkingDirectory=/home/bot/weeetofono
+ExecStart=/usr/local/bin/pipenv run python3 /home/bot/weeetofono/weeetofono.py
 Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
-Alias=weeetofono.service

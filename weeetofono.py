@@ -25,5 +25,5 @@ updater.dispatcher.add_handler(CommandHandler('suona', suona))
 
 print("weeetofono started, begin polling")
 
-updater.start_polling()
+updater.start_polling(timeout=30.0, poll_interval=60.0)
 updater.idle()

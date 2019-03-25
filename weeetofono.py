@@ -2,14 +2,6 @@ import os
 # noinspection PyPackageRequirements
 from telegram.ext import Updater, CommandHandler
 import simpleaudio
-import logging
-
-logging.basicConfig(
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    level=logging.DEBUG,
-)
-
-logger = logging.getLogger(__name__)
 
 campanello = None
 
@@ -30,8 +22,6 @@ wave_obj = simpleaudio.WaveObject.from_wave_file("weeedong.wav")
 updater = Updater(os.environ['TOKEN'])
 
 updater.dispatcher.add_handler(CommandHandler('suona', suona))
-
-print("weeetofono started, begin polling")
 
 updater.start_polling(timeout=120)
 updater.idle()

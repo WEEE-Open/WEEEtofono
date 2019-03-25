@@ -7,10 +7,13 @@ verify_ssl = true
 
 [packages]
 simpleaudio = "*"
-python-telegram-bot = "*"
+python-telegram-bot = ">=12.0.0b1"
 
 [requires]
 python_version = "3.7"
 
 [scripts]
 bot = "python weeetofono.py"
+
+[pipenv]
+allow_prereleases = true

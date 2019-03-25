@@ -2,6 +2,14 @@ import os
 # noinspection PyPackageRequirements
 from telegram.ext import Updater, CommandHandler
 import simpleaudio
+import logging
+
+logging.basicConfig(
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    level=logging.DEBUG,
+)
+
+logger = logging.getLogger(__name__)
 
 campanello = None
 

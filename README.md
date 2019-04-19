@@ -13,4 +13,4 @@ pipenv install
 
 Then run `TOKEN=123456:f00b4rf00b4rf00b4rf00b4r pipenv run bot`.
 
-Replace the TOKEN variable with your real token. Same thing for the exaple system service.
+Replace the TOKEN variable with your real token. Same thing for the example systemd service.
